@@ -16,13 +16,11 @@ const greetingSlice = createSlice({
   initialState: [],
   reducers: {
     addGreeting(state, action) {
-      state.push(action.payload);
+      return action.payload;
     },
   },
   extraReducers: {
-    [fetchGreeting.fulfilled]: (state, action) => {
-      state.push(action.payload);
-    },
+    [fetchGreeting.fulfilled]: (state, action) => action.payload,
   },
 });
 
