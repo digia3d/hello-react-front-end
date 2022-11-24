@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchGreeting } from '../redux/greetingSlice';
 
-const Greeting = async () => {
+const Greeting = () => {
   const dispatch = useDispatch();
-  const greeting = useSelector((state) => state.greeting);
+  const greetings = useSelector((state) => state.greeting);
 
   useEffect(() => {
     dispatch(fetchGreeting());
@@ -15,7 +15,7 @@ const Greeting = async () => {
       <h1 className="heading">Greeting</h1>
       <ul className="list">
         {
-          greeting.map((greeting) => (
+          greetings.map((greeting) => (
             <li key={greeting.id} className="list_item">
               {greeting.greeting}
             </li>
