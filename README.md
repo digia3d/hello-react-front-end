@@ -4,6 +4,10 @@
 
 > This is a project designed to implement a connection between a Ruby on Rails back-end and React front-end.
 
+## Overview
+
+[link to the frontend app](https://github.com/digia3d/hello-react-front-end)
+
 ## Built With
 
 - Rails
